@@ -1,0 +1,376 @@
+$white: #fff
+$blue: #00c7e8
+$light-gray: #bfbfbf
+$dark-gray: #474242
+
+=column-count($count)
+	column-count: $count
+	-moz-column-count: $count
+	-webkit-column-count: $count
+	
+=column-gap($gap)
+	column-gap: $gap
+	-webkit-column-gap: $gap
+	-moz-column-gap: $gap
+
+* 
+	box-sizing: border-box
+
+.row:before, 
+.row:after 
+	content: ""
+	display: table 
+	clear: both
+ 
+body 
+
+
+	margin: 0
+	font-family: 'Open Sans', sans-serif
+
+.container 
+	width: 100%
+	max-width: 1200px
+	margin: auto
+ 
+[class*="col-"] 
+	width: 100%
+	padding: 12px 
+	float: left
+
+h1, h2, h3, h4, h5, h6 
+	text-transform: uppercase
+
+/*HEADER*/
+
+header 
+	background-color: $dark-gray
+	ul 
+		float: none
+		padding: 0
+		list-style-type: none
+		li 
+			display: block
+			text-align: center
+			padding: 5px 0
+			a   
+				color: $white
+				font-weight: bold
+				text-decoration: none
+				text-transform: uppercase
+				&:hover
+					color: $light-gray
+			.blue 
+				color: $blue
+	.img 
+		background-image: url("https://placeholdit.imgix.net/~text?  txtsize=8&txt=150%C3%9730&w=150&h=30")
+		text-align: center
+		padding-top: 7px
+		font-weight: bold
+		font-size: 20px
+
+/*/HERO/*/
+
+.hero 
+	max-width: 100%
+	height: 450px
+	background-image: url(https://hd.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg)
+	background-size: cover
+	background-position: center
+	overflow: hidden
+	.slogan 
+		background-color: rgba(0, 0, 0, 0.5)
+		float: none
+		max-width: 650px
+		margin-top: 150px
+		h1 
+			text-align: left
+			color: $white
+			padding-left: 50px
+			font-size: 30px
+			line-height: 95%
+		h1::first-line 
+			font-weight: 100
+
+/*3 ICONS IN LINE*/
+
+section .container 
+	margin: 50px auto
+	text-align: center
+	.icon-btn 
+		display: inline-block
+		width: 130px
+		height: 130px
+		border: none
+		border-radius: 15%
+		margin: 10px 10px
+		.fa-globe:before, .fa-laptop:before, .fa-cogs:before 
+			font-size: 80px
+			color: $white
+	.globe, .cogs 
+		@extend .icon-btn
+		background-color: $dark-gray
+	.laptop
+		@extend .icon-btn
+		background-color: $blue
+	.benefits 
+		color: $light-gray
+	.customizable 
+		color: $blue
+ 
+/*WORKS*/
+
+.works 
+	color: $light-gray
+
+h3 .title-works 
+	color: $dark-gray
+
+/*GALLERY*/
+
+.gallery 
+	position: relative
+	.layer 
+		position: absolute
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0,0)
+		.icon-btn
+			background-color: white
+			width: 40px
+			height: 40px
+			border: none
+			border-radius: 15%
+			position: absolute
+			top: 50%	
+		.link
+			@extend .icon-btn
+			left: 35%
+		.search
+			@extend .icon-btn
+			right: 35%
+			.fa-link:before, .fa-search:before 
+				font-weight: bold
+				color: $dark-gray
+	.gallery-img 
+		height: 225px
+		width: 100%
+		background-size: cover
+		background-position: center
+		border: none
+	.gallery-img1 
+		background-image: url(https://hd.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg)
+		@extend .gallery-img
+	.gallery-img2 
+		background-image: url(https://hd.unsplash.com/reserve/RONyPwknRQOO3ag4xf3R_Kinsey.jpg)
+		@extend .gallery-img
+	.gallery-img3 
+		background-image: url(https://hd.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg)
+		@extend .gallery-img
+	.gallery-img4 
+		background-image: url(https://hd.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg)
+		@extend .gallery-img
+	.gallery-img5 
+		background-image: url(https://hd.unsplash.com/photo-1449736656150-4a1b15a60c74)
+		@extend .gallery-img
+	.gallery-img6 
+		background-image: url(https://hd.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg)
+		@extend .gallery-img
+	.gallery-img7 
+		background-image: url(https://hd.unsplash.com/photo-1449736656150-4a1b15a60c74)
+		@extend .gallery-img
+	.gallery-img8 
+		background-image: url(https://hd.unsplash.com/reserve/RONyPwknRQOO3ag4xf3R_Kinsey.jpg)
+		@extend .gallery-img
+
+/*EMPLOYEE*/
+
+section .container .row .col-m-3 .employee-img 
+	background-color: $light-gray
+	border-radius: 50%
+	height: 150px
+	width: 150px
+	&:hover
+		background-color: $dark-gray
+
+.employee
+	font-size: 20px
+	font-weight: bold
+	color: $dark-gray
+  
+/*PROMOTIONAL SECTION*/
+
+.column 
+	+column-count(2)
+	+column-gap(30px)
+	text-align: justify
+	color: $light-gray
+	margin-left: 20px
+
+.title_column 
+	color: $dark-gray
+
+/*FIGURES*/
+
+.figures 
+	font-weight: bold
+	font-size: 40px
+	margin: 0
+
+.description 
+	text-transform: uppercase
+	color: $blue
+	font-weight: bold
+
+/*FOOTER*/
+
+footer:not(.copyrights) 
+	background: $dark-gray
+footer 
+	color: $white
+	.col-m-6, .col-m-4, .col-m-2, p, h3 
+		padding: 0 12px
+		margin: 5px auto
+		text-align: center
+	.about 
+		text-align: justify
+	.socialmedia-btn 
+		display: inline-block
+		width: 35px
+		height: 35px
+		border: none
+		margin: 2px 1px
+		border: none
+		background-color: $blue
+		.socialmedia:before 
+			font-size: 20px
+			color: $white
+	.copyrights 
+		background: #252726
+ 	
+/*MEDIA QUERIES*/
+
+@media screen and (min-width: 480px) and (max-width: 767px) 
+
+	.col-s-1 
+		width: 8.33%
+	.col-s-2 
+		width: 16.66%
+	.col-s-3 
+		width: 25%
+	.col-s-4 
+		width: 33.33%
+	.col-s-48 
+		width: 40%
+	.col-s-5 
+		width: 41.66%
+	.col-s-6 
+		width: 50%
+	.col-s-7 
+		width: 58.33%
+	.col-s-8 
+		width: 66.66%
+	.col-s-9 
+		width: 75%
+	.col-s-10 
+		width: 83.33%
+	.col-s-11 
+		width: 91.66%
+	.col-s-12 
+		width: 100%
+    
+	.clearfix 
+		overflow: auto
+	
+	header nav .img 
+		font-size: 25px
+
+	.column 
+		margin: 0 0 0 5px
+		padding: 0
+
+	.promotional img 
+		padding: 0
+		margin: 32px auto
+
+	.title_column 
+		margin: 0
+
+@media (min-width: 768px) 
+
+	.col-m-1 
+		width: 8.33%
+	.col-m-2 
+		width: 16.66%
+	.col-m-24 
+		width: 20%
+	.col-m-3 
+		width: 25%
+	.col-m-4 
+		width: 33.33%
+	.col-m-48 
+		width: 40%
+	.col-m-5 
+		width: 41.66%
+	.col-m-6 
+		width: 50%
+	.col-m-7 
+		width: 58.33%
+	.col-m-8 
+		width: 66.66%
+	.col-m-9 
+		width: 75%
+	.col-m-10 
+		width: 83.33%
+	.col-m-11 
+		width: 91.66%
+	.col-m-12 
+		width: 100%
+    
+	.clearfix 
+		overflow: auto
+ 
+	header
+		ul 
+			float: right
+			margin: 0
+			list-style-type: none
+			li 
+				display: inline-block
+				padding: 0
+				a 
+					line-height: 50px
+					margin: 10px 20px
+					color: $white
+					font-weight: bold
+					font-size: 20px
+		.img 
+			background-image: url("https://placeholdit.imgix.net/~text?  txtsize=8&txt=150%C3%9730&w=150&h=30")
+			float: left
+			margin: 5px 0
+			padding: 0
+			font-size: 30px
+
+	.hero
+		.slogan 
+			float: right  
+			h1 
+				font-size: 40px
+
+	.gallery 
+		position: relative
+		padding: 0
+		&:hover .layer
+			display: block	
+		.layer 
+			display: none
+			position: absolute
+			background-color: rgba(0,0,0,0.5)
+			.link 
+				left: 30%	
+			.search 
+				right: 30%
+		.gallery-img 
+			display: block

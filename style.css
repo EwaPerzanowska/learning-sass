@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box; }
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto; }
+
+[class*="col-"] {
+  width: 100%;
+  padding: 12px;
+  float: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase; }
+
+/*HEADER */
+header {
+  background-color: #474242; }
+  header ul {
+    float: none;
+    padding: 0;
+    list-style-type: none; }
+    header ul li {
+      display: block;
+      text-align: center;
+      padding: 5px 0; }
+      header ul li a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase; }
+        header ul li a:hover {
+          color: #bfbfbf; }
+      header ul li .blue {
+        color: #00c7e8; }
+  header .img {
+    background-image: url("https://placeholdit.imgix.net/~text?  txtsize=8&txt=150%C3%9730&w=150&h=30");
+    text-align: center;
+    padding-top: 7px;
+    font-weight: bold;
+    font-size: 20px; }
+
+/*/HERO/ */
+.hero {
+  max-width: 100%;
+  height: 450px;
+  background-image: url(https://hd.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+  .hero .slogan {
+    background-color: rgba(0, 0, 0, 0.5);
+    float: none;
+    max-width: 650px;
+    margin-top: 150px; }
+    .hero .slogan h1 {
+      text-align: left;
+      color: #fff;
+      padding-left: 50px;
+      font-size: 30px;
+      line-height: 95%; }
+    .hero .slogan h1::first-line {
+      font-weight: 100; }
+
+/*3 ICONS IN LINE */
+section .container {
+  margin: 50px auto;
+  text-align: center; }
+  section .container .icon-btn, section .container .globe, section .container .cogs, section .container .laptop, section .container .gallery .layer .link, .gallery .layer section .container .link, section .container .gallery .layer .search, .gallery .layer section .container .search {
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border: none;
+    border-radius: 15%;
+    margin: 10px 10px; }
+    section .container .icon-btn .fa-globe:before, section .container .globe .fa-globe:before, section .container .cogs .fa-globe:before, section .container .laptop .fa-globe:before, section .container .gallery .layer .link .fa-globe:before, .gallery .layer section .container .link .fa-globe:before, section .container .gallery .layer .search .fa-globe:before, .gallery .layer section .container .search .fa-globe:before, section .container .icon-btn .fa-laptop:before, section .container .globe .fa-laptop:before, section .container .cogs .fa-laptop:before, section .container .laptop .fa-laptop:before, section .container .gallery .layer .link .fa-laptop:before, .gallery .layer section .container .link .fa-laptop:before, section .container .gallery .layer .search .fa-laptop:before, .gallery .layer section .container .search .fa-laptop:before, section .container .icon-btn .fa-cogs:before, section .container .globe .fa-cogs:before, section .container .cogs .fa-cogs:before, section .container .laptop .fa-cogs:before, section .container .gallery .layer .link .fa-cogs:before, .gallery .layer section .container .link .fa-cogs:before, section .container .gallery .layer .search .fa-cogs:before, .gallery .layer section .container .search .fa-cogs:before {
+      font-size: 80px;
+      color: #fff; }
+  section .container .globe, section .container .cogs {
+    background-color: #474242; }
+  section .container .laptop {
+    background-color: #00c7e8; }
+  section .container .benefits {
+    color: #bfbfbf; }
+  section .container .customizable {
+    color: #00c7e8; }
+
+/*WORKS */
+.works {
+  color: #bfbfbf; }
+
+h3 .title-works {
+  color: #474242; }
+
+/*GALLERY */
+.gallery {
+  position: relative; }
+  .gallery .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; }
+    .gallery .layer .icon-btn, .gallery .layer section .container .globe, section .container .gallery .layer .globe, .gallery .layer section .container .cogs, section .container .gallery .layer .cogs, .gallery .layer section .container .laptop, section .container .gallery .layer .laptop, .gallery .layer .link, .gallery .layer .search {
+      background-color: white;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 15%;
+      position: absolute;
+      top: 50%; }
+    .gallery .layer .link {
+      left: 35%; }
+    .gallery .layer .search {
+      right: 35%; }
+      .gallery .layer .search .fa-link:before, .gallery .layer .search .fa-search:before {
+        font-weight: bold;
+        color: #474242; }
+  .gallery .gallery-img, .gallery .gallery-img1, .gallery .gallery-img2, .gallery .gallery-img3, .gallery .gallery-img4, .gallery .gallery-img5, .gallery .gallery-img6, .gallery .gallery-img7, .gallery .gallery-img8 {
+    height: 225px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border: none; }
+  .gallery .gallery-img1 {
+    background-image: url(https://hd.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg); }
+  .gallery .gallery-img2 {
+    background-image: url(https://hd.unsplash.com/reserve/RONyPwknRQOO3ag4xf3R_Kinsey.jpg); }
+  .gallery .gallery-img3 {
+    background-image: url(https://hd.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg); }
+  .gallery .gallery-img4 {
+    background-image: url(https://hd.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg); }
+  .gallery .gallery-img5 {
+    background-image: url(https://hd.unsplash.com/photo-1449736656150-4a1b15a60c74); }
+  .gallery .gallery-img6 {
+    background-image: url(https://hd.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg); }
+  .gallery .gallery-img7 {
+    background-image: url(https://hd.unsplash.com/photo-1449736656150-4a1b15a60c74); }
+  .gallery .gallery-img8 {
+    background-image: url(https://hd.unsplash.com/reserve/RONyPwknRQOO3ag4xf3R_Kinsey.jpg); }
+
+/*EMPLOYEE */
+section .container .row .col-m-3 .employee-img {
+  background-color: #bfbfbf;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px; }
+  section .container .row .col-m-3 .employee-img:hover {
+    background-color: #474242; }
+
+.employee {
+  font-size: 20px;
+  font-weight: bold;
+  color: #474242; }
+
+/*PROMOTIONAL SECTION */
+.column {
+  column-count: 2;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-gap: 30px;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  text-align: justify;
+  color: #bfbfbf;
+  margin-left: 20px; }
+
+.title_column {
+  color: #474242; }
+
+/*FIGURES */
+.figures {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0; }
+
+.description {
+  text-transform: uppercase;
+  color: #00c7e8;
+  font-weight: bold; }
+
+/*FOOTER */
+footer:not(.copyrights) {
+  background: #474242; }
+
+footer {
+  color: #fff; }
+  footer .col-m-6, footer .col-m-4, footer .col-m-2, footer p, footer h3 {
+    padding: 0 12px;
+    margin: 5px auto;
+    text-align: center; }
+  footer .about {
+    text-align: justify; }
+  footer .socialmedia-btn {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    margin: 2px 1px;
+    border: none;
+    background-color: #00c7e8; }
+    footer .socialmedia-btn .socialmedia:before {
+      font-size: 20px;
+      color: #fff; }
+  footer .copyrights {
+    background: #252726; }
+
+/*MEDIA QUERIES */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .col-s-1 {
+    width: 8.33%; }
+
+  .col-s-2 {
+    width: 16.66%; }
+
+  .col-s-3 {
+    width: 25%; }
+
+  .col-s-4 {
+    width: 33.33%; }
+
+  .col-s-48 {
+    width: 40%; }
+
+  .col-s-5 {
+    width: 41.66%; }
+
+  .col-s-6 {
+    width: 50%; }
+
+  .col-s-7 {
+    width: 58.33%; }
+
+  .col-s-8 {
+    width: 66.66%; }
+
+  .col-s-9 {
+    width: 75%; }
+
+  .col-s-10 {
+    width: 83.33%; }
+
+  .col-s-11 {
+    width: 91.66%; }
+
+  .col-s-12 {
+    width: 100%; }
+
+  .clearfix {
+    overflow: auto; }
+
+  header nav .img {
+    font-size: 25px; }
+
+  .column {
+    margin: 0 0 0 5px;
+    padding: 0; }
+
+  .promotional img {
+    padding: 0;
+    margin: 32px auto; }
+
+  .title_column {
+    margin: 0; } }
+@media (min-width: 768px) {
+  .col-m-1 {
+    width: 8.33%; }
+
+  .col-m-2 {
+    width: 16.66%; }
+
+  .col-m-24 {
+    width: 20%; }
+
+  .col-m-3 {
+    width: 25%; }
+
+  .col-m-4 {
+    width: 33.33%; }
+
+  .col-m-48 {
+    width: 40%; }
+
+  .col-m-5 {
+    width: 41.66%; }
+
+  .col-m-6 {
+    width: 50%; }
+
+  .col-m-7 {
+    width: 58.33%; }
+
+  .col-m-8 {
+    width: 66.66%; }
+
+  .col-m-9 {
+    width: 75%; }
+
+  .col-m-10 {
+    width: 83.33%; }
+
+  .col-m-11 {
+    width: 91.66%; }
+
+  .col-m-12 {
+    width: 100%; }
+
+  .clearfix {
+    overflow: auto; }
+
+  header ul {
+    float: right;
+    margin: 0;
+    list-style-type: none; }
+    header ul li {
+      display: inline-block;
+      padding: 0; }
+      header ul li a {
+        line-height: 50px;
+        margin: 10px 20px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px; }
+  header .img {
+    background-image: url("https://placeholdit.imgix.net/~text?  txtsize=8&txt=150%C3%9730&w=150&h=30");
+    float: left;
+    margin: 5px 0;
+    padding: 0;
+    font-size: 30px; }
+
+  .hero .slogan {
+    float: right; }
+    .hero .slogan h1 {
+      font-size: 40px; }
+
+  .gallery {
+    position: relative;
+    padding: 0; }
+    .gallery:hover .layer {
+      display: block; }
+    .gallery .layer {
+      display: none;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5); }
+      .gallery .layer .link {
+        left: 30%; }
+      .gallery .layer .search {
+        right: 30%; }
+    .gallery .gallery-img, .gallery .gallery-img1, .gallery .gallery-img2, .gallery .gallery-img3, .gallery .gallery-img4, .gallery .gallery-img5, .gallery .gallery-img6, .gallery .gallery-img7, .gallery .gallery-img8 {
+      display: block; } }
+
+/*# sourceMappingURL=style.css.map */
